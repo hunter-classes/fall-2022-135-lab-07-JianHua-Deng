@@ -24,7 +24,6 @@ while(std::getline(badcodes, line)){
 
    newstring = newstring + line + '\n';
    count += countChar(line, '{');
-   count -= countChar(line, '}'); 
 }//end while loop
 badcodes.close();
 return newstring;
