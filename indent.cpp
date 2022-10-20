@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "indent.h"
 int countChar(std::string line, char c){
     int count = 0;
@@ -9,4 +10,23 @@ int countChar(std::string line, char c){
     }//end for loop
     return count;
 }//end countChar function
+
+std::string indentation(std::ifstream& badcodes){
+std::string line, newstring;
+int count = 0;
+while(std::getline(badcodes, line)){ 
+    if(line[0] == '}'){
+        count--;
+    }
+   for(int i = 0; i < count; i++){
+        newstring += '\t';
+   }//end for loop
+
+   newstring = newstring + line + '\n';
+   count += countChar(line, '{');
+   count -= countChar(line, '}'); 
+}//end while loop
+badcodes.close();
+return newstring;
+}//end indentation
 
