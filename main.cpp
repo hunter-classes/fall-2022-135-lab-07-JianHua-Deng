@@ -10,7 +10,7 @@ std::cout << "removeLeadingSpaces(\"       int x = 1;  \"): " << std::endl << re
 std::cout << "------------REMOVED INDENTATION FOR bad-code.cpp --------------" << std::endl;
 std::cout << removeSpaces("bad-code.cpp")<< std::endl;
 //print out indented fixed codes
-std::cout << "---------------PROPERLY FORMATTED bad-code.cpp-----------------" << std::endl;
+std::cout << "---------PROPERLY FORMATTED INDENTATON FOR bad-code.cpp--------" << std::endl;
 std::cout << indentation("bad-code.cpp") << std::endl;
 return 0;
 }
