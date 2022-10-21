@@ -1,5 +1,5 @@
-main: main.o indent.o
-	g++ -o main main.o indent.o
+main: main.o unindent.o indent.o
+	g++ -o main main.o unindent.o indent.o
 
 tests: tests.o unindent.o indent.o
 	g++ -o tests tests.o unindent.o indent.o
