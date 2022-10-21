@@ -1,21 +1,16 @@
 #include <iostream>
 #include <fstream>
-//#include "unindent.h"
+#include "unindent.h"
 #include "indent.h"
 int main(){
-std::cout << removeLeadingSpaces("       int x = 1;  ") << std::endl;
 
-//open bad-code.cpp
-int count = 0;
-std::string result;
-std::ifstream badFile("bad-code.cpp");
-if(badFile.fail()){
-    std::cout << "Failed to open file" << std::endl;
-    return 1;
-}//end condition
-
+std::cout << "----------------------removeLeadingSpaces:---------------------" << std::endl;
+std::cout << "removeLeadingSpaces(\"       int x = 1;  \"): " << std::endl << removeLeadingSpaces("       int x = 1;  ") << std::endl;
+//printout the wholebad-code.cpp with removeLeadingSpaces function
+std::cout << "------------REMOVED INDENTATION FOR bad-code.cpp --------------" << std::endl;
+std::cout << removeSpaces("bad-code.cpp")<< std::endl;
 //print out indented fixed codes
-result = indentation(badFile);
-std::cout << result << std::endl;
+std::cout << "---------------PROPERLY FORMATTED bad-code.cpp-----------------" << std::endl;
+std::cout << indentation("bad-code.cpp") << std::endl;
 return 0;
 }

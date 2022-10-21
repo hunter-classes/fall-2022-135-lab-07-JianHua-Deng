@@ -13,9 +13,18 @@ int countChar(std::string line, char c){
     return count;
 }//end countChar function
 
-std::string indentation(std::ifstream& badcodes){
+std::string indentation(std::string filename){
+
+//opening file
+std::ifstream badcodes(filename);
+if(badcodes.fail()){
+    return "Failed to open file";  
+}//end condition
+
 std::string line, newstring;
 int count = 0;
+
+
 while(std::getline(badcodes, line)){ 
     line = removeLeadingSpaces(line);
     if(line[0] == '}'){
