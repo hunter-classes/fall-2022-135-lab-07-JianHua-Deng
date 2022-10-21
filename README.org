@@ -6,7 +6,7 @@
 
 * GitHub username: JianHua-Deng
 
-* Notes:
+* Notes: main.cpp are the only exectuable file and will print the content of bad-code.cpp in both properly formatted as the lab stated and without leading spaces as the lab stated.
 
 
   
