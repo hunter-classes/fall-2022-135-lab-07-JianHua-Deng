@@ -1,3 +1,4 @@
 *main
-*.vs
+*.vscode
 *tests
+*.gitignore
