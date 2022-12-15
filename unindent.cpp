@@ -30,7 +30,7 @@ if(badcodes.fail()){
 std::string result, line;
 //removing spaces
 while(std::getline(badcodes, line)){
-result = result + removeLeadingSpaces(line) + "\n";
+    result = result + removeLeadingSpaces(line) + "\n";
 }//end while loop
 badcodes.close();
 return result;
