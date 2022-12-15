@@ -30,12 +30,12 @@ while(std::getline(badcodes, line)){
     if(line[0] == '}'){
         count--;
     }
-   for(int i = 0; i < count; i++){
+    for(int i = 0; i < count; i++){
         newstring += '\t';
-   }//end for loop
+    }//end for loop
 
-   newstring = newstring + line + '\n';
-   count += countChar(line, '{');
+    newstring = newstring + line + '\n';
+    count += countChar(line, '{');
 }//end while loop
 badcodes.close();
 return newstring;
